@@ -1,0 +1,30 @@
+.container-scroll{
+    height: 80vh;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    &, .scroller-item{
+        &::-webkit-scrollbar{
+            width: 10px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        &::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0.5);
+        }
+    }
+
+    .scroller-item{
+        min-width: 80vw;
+        min-height: 50vh;
+        overflow-y: auto;
+        margin: 10px 10px;
+        padding: 10px 10px;
+
+        li{
+            margin: 10px 0px;
+        }
+    }
+}
