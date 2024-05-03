@@ -1,0 +1,271 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  scroll-behavior: smooth;
+  color: #bdbdbd;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+
+/*****Custom Styling*****/
+/*****Text Decoration Styling*****/
+/*****Flexbox Decoration Styling*****/
+/*****Gridbox Display Styling*****/
+/*****Icon Decoration Styling*****/
+/*****Scroller Decoration Styling*****/
+/*****Card Decoration Styling*****/
+html, body {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #363535, #5a5858);
+}
+html a, html .title, html .carousel-item-title, html .card-title, html .btn-link, html ul, body a, body .title, body .carousel-item-title, body .card-title, body .btn-link, body ul {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+html .card, body .card {
+  width: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right, #264040, #111111);
+}
+html .card .card-img-top, body .card .card-img-top {
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+html .card .card-body .card-title, html .card .card-body .card-text, body .card .card-body .card-title, body .card .card-body .card-text {
+  list-style-type: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+html .card .card-body .btn-link, body .card .card-body .btn-link {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 10px;
+  color: #bdbdbd;
+  background-color: #111111;
+}
+html img, body img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*****Navigation Bar Styling*****/
+#navbar {
+  position: fixed;
+  z-index: 5;
+  border-radius: 10px;
+  /*****Logo Styling*****/
+}
+#navbar #logo {
+  max-width: 60px;
+  max-height: 60px;
+  width: 100%;
+  height: 100%;
+}
+#navbar .nav-link {
+  text-align: center;
+  border-radius: 50%;
+  margin: 10px 5px;
+  padding: 5px 5px;
+  background-color: #363535;
+}
+#navbar .nav-link span {
+  position: absolute;
+  left: 105%;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 0px 5px;
+  background-color: #111111;
+}
+
+/*****Main Content Container Styling*****/
+main .container {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+}
+main .container .container-fluid {
+  display: grid;
+  gap: 10px 10px;
+}
+main .container .container-scroll {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+  align-items: initial;
+  height: 80vh;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+main .container .container-scroll::-webkit-scrollbar, main .container .container-scroll .scroller-item::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .container .container-scroll::-webkit-scrollbar-thumb, main .container .container-scroll .scroller-item::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .container .container-scroll .scroller-item {
+  min-width: 80vw;
+  min-height: 50vh;
+  overflow-y: auto;
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+main .container .container-scroll .scroller-item li {
+  margin: 10px 0px;
+}
+
+/**********************************************************************Mobile Layout**********/
+@media only screen and (min-width: 320px) {
+  /*****Navigation Bar Styling*****/
+  #navbar {
+    bottom: 1%;
+    left: 1%;
+    right: 1%;
+    padding: 5px 5px;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #navbar #container-nav {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  #navbar #container-nav #container-nav-link, #navbar #container-nav #social-media {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+    align-items: inherit;
+  }
+  /*****Main Content Container Styling*****/
+  main {
+    margin: 10px 0px 120px 0px;
+    /*****Index Page Styling*****/
+  }
+  main #index-content-container {
+    /*****Index Carousel Styling*****/
+    /*****News Section Styling*****/
+  }
+  main #index-content-container #index-carousel .carousel-item img {
+    width: 100%;
+    height: 80vh;
+  }
+  main #index-content-container #index-carousel .carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 5px 5px;
+  }
+  main #index-content-container #index-carousel .carousel-control-prev span, main #index-content-container #index-carousel .carousel-control-next span {
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  main #index-content-container #index-carousel .carousel-caption {
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  main #index-content-container #news {
+    grid-template-columns: auto;
+  }
+}
+/**********************************************************************Tablet Layout**********/
+@media only screen and (min-width: 768px) {
+  /*****Main Content Container Styling*****/
+  main {
+    /*****Index Page Styling*****/
+  }
+  main #index-content-container {
+    /*****News Section Styling*****/
+  }
+  main #index-content-container #news {
+    grid-template-columns: auto auto;
+  }
+}
+/**********************************************************************Laptop, Desktop & Large Screen Layout**********/
+@media only screen and (min-width: 1024px) {
+  /*****Navigation Bar Styling*****/
+  #navbar {
+    top: 1%;
+    right: initial;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /*****Logo Styling*****/
+  }
+  #navbar #logo {
+    margin: 5px 10px;
+  }
+  #navbar #container-nav {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: inherit;
+  }
+  #navbar #container-nav #container-nav-link, #navbar #container-nav #social-media {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: inherit;
+    margin: 10px 0px;
+  }
+  /*****Main Content Container Styling*****/
+  main {
+    margin: 10px 0px 10px 100px;
+    /*****Index Page Styling*****/
+  }
+  main #index-content-container {
+    /*****News Section Styling*****/
+  }
+  main #index-content-container #news {
+    grid-template-columns: auto auto auto;
+  }
+}/*# sourceMappingURL=reignsStyle.css.map */
